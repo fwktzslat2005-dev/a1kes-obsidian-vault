@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+  <defs>
+    <style>
+      text { font-family: "SimSun", "Microsoft YaHei", Arial, sans-serif; font-size: 18px; fill: #111; }
+      .title { font-size: 28px; font-weight: 700; }
+      .small { font-size: 15px; }
+      .tiny { font-size: 13px; }
+      .line { stroke: #111; stroke-width: 2.4; fill: none; }
+      .thin { stroke: #111; stroke-width: 1.4; fill: none; }
+      .dash { stroke: #111; stroke-width: 1.6; fill: none; stroke-dasharray: 7 6; }
+      .box { stroke: #111; stroke-width: 1.8; fill: #fff; }
+      .bus { stroke: #111; stroke-width: 5; fill: none; }
+      .ground { stroke: #111; stroke-width: 1.8; fill: none; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="38" class="title">交直流混合微电网总体一次电气图</text>
+
+  <!-- Upper grid and PCC -->
+  <circle cx="120" cy="86" r="28" class="line"/>
+  <path d="M105 86 C112 70, 128 102, 136 86" class="thin"/>
+  <text x="74" y="42">上级 380V 配电网</text>
+  <line x1="120" y1="114" x2="120" y2="164" class="line"/>
+  <rect x="94" y="122" width="52" height="24" class="box"/>
+  <text x="101" y="140" class="small">QF0</text>
+  <circle cx="120" cy="160" r="12" class="thin"/>
+  <text x="140" y="165" class="small">PCC</text>
+  <rect x="160" y="118" width="120" height="42" class="box"/>
+  <text x="178" y="144" class="small">保护/计量</text>
+  <line x1="132" y1="146" x2="160" y2="138" class="thin"/>
+
+  <!-- Large AC microgrid boundary and bus -->
+  <rect x="52" y="172" width="1290" height="716" class="dash"/>
+  <text x="64" y="202">交流大微电网边界</text>
+  <line x1="92" y1="236" x2="1258" y2="236" class="bus"/>
+  <text x="512" y="224">交流大微电网 380V 交流主母线</text>
+  <line x1="120" y1="172" x2="120" y2="236" class="line"/>
+
+  <!-- TN-S neutral and PE hint -->
+  <line x1="92" y1="258" x2="640" y2="258" class="thin"/>
+  <text x="648" y="263" class="small">N 线</text>
+  <line x1="92" y1="278" x2="640" y2="278" class="thin"/>
+  <text x="648" y="283" class="small">PE 线（外壳保护接地）</text>
+  <line x1="120" y1="278" x2="120" y2="308" class="thin"/>
+  <path d="M104 308 H136 M110 316 H130 M116 324 H124" class="ground"/>
+
+  <!-- Large microgrid branches -->
+  <g id="large-branches">
+    <!-- PV 200 -->
+    <line x1="210" y1="236" x2="210" y2="326" class="line"/>
+    <rect x="190" y="266" width="40" height="24" class="box"/>
+    <text x="196" y="284" class="tiny">QF</text>
+    <rect x="148" y="326" width="124" height="48" class="box"/>
+    <text x="166" y="354">DC/AC</text>
+    <rect x="146" y="396" width="128" height="58" class="box"/>
+    <text x="162" y="420">PV 200kW</text>
+    <text x="156" y="442" class="small">DC/DC MPPT</text>
+    <line x1="210" y1="374" x2="210" y2="396" class="line"/>
+
+    <!-- Wind 50 -->
+    <line x1="350" y1="236" x2="350" y2="326" class="line"/>
+    <rect x="330" y="266" width="40" height="24" class="box"/>
+    <text x="336" y="284" class="tiny">QF</text>
+    <rect x="292" y="326" width="116" height="48" class="box"/>
+    <text x="304" y="354">AC/DC-DC/AC</text>
+    <circle cx="350" cy="420" r="24" class="line"/>
+    <line x1="350" y1="396" x2="350" y2="374" class="line"/>
+    <path d="M350 420 L350 390 M350 420 L323 434 M350 420 L377 434" class="thin"/>
+    <text x="286" y="462">直驱风机 50kW</text>
+
+    <!-- ESS 250 -->
+    <line x1="500" y1="236" x2="500" y2="326" class="line"/>
+    <rect x="480" y="266" width="40" height="24" class="box"/>
+    <text x="486" y="284" class="tiny">QF</text>
+    <rect x="452" y="326" width="96" height="48" class="box"/>
+    <text x="480" y="354">PCS</text>
+    <rect x="432" y="396" width="136" height="58" class="box"/>
+    <text x="448" y="422">储能系统</text>
+    <text x="448" y="444">250kW×2h</text>
+    <line x1="500" y1="374" x2="500" y2="396" class="line"/>
+
+    <!-- Important load -->
+    <line x1="648" y1="236" x2="648" y2="338" class="line"/>
+    <rect x="628" y="266" width="40" height="24" class="box"/>
+    <text x="634" y="284" class="tiny">QF</text>
+    <rect x="586" y="338" width="124" height="58" class="box"/>
+    <text x="610" y="364">重要负荷</text>
+    <text x="620" y="386">100kW</text>
+
+    <!-- Non-important load -->
+    <line x1="790" y1="236" x2="790" y2="338" class="line"/>
+    <rect x="770" y="266" width="40" height="24" class="box"/>
+    <text x="776" y="284" class="tiny">QF</text>
+    <rect x="720" y="338" width="140" height="58" class="box"/>
+    <text x="742" y="364">非重要负荷</text>
+    <text x="762" y="386">100kW</text>
+  </g>
+
+  <!-- AC sub microgrid -->
+  <rect x="895" y="306" width="360" height="214" class="dash"/>
+  <text x="914" y="332">交流小微电网</text>
+  <line x1="930" y1="372" x2="1218" y2="372" class="bus"/>
+  <text x="996" y="358" class="small">380V AC 母线</text>
+  <line x1="930" y1="236" x2="930" y2="372" class="line"/>
+  <rect x="910" y="268" width="40" height="24" class="box"/>
+  <text x="913" y="286" class="tiny">QF/STS</text>
+  <text x="952" y="288" class="small">联络断路器/静态开关</text>
+
+  <line x1="980" y1="372" x2="980" y2="432" class="line"/>
+  <rect x="938" y="432" width="84" height="44" class="box"/>
+  <text x="950" y="458" class="small">PV 50kW</text>
+  <line x1="1080" y1="372" x2="1080" y2="432" class="line"/>
+  <rect x="1032" y="432" width="96" height="44" class="box"/>
+  <text x="1045" y="458" class="small">负荷 50kW</text>
+  <line x1="1180" y1="372" x2="1180" y2="432" class="line"/>
+  <rect x="1132" y="432" width="108" height="56" class="box"/>
+  <text x="1148" y="456" class="small">储能</text>
+  <text x="1142" y="478" class="small">50kW×2h</text>
+  <rect x="984" y="490" width="160" height="24" class="box"/>
+  <text x="1000" y="508" class="tiny">交流小微网协调控制器</text>
+
+  <!-- DC sub microgrid -->
+  <rect x="794" y="568" width="500" height="260" class="dash"/>
+  <text x="812" y="594">直流小微电网</text>
+  <line x1="868" y1="650" x2="1238" y2="650" class="bus"/>
+  <text x="1010" y="636" class="small">DC 母线</text>
+  <line x1="1090" y1="236" x2="1090" y2="530" class="line"/>
+  <rect x="1070" y="268" width="40" height="24" class="box"/>
+  <text x="1076" y="286" class="tiny">QF</text>
+  <rect x="1030" y="510" width="120" height="48" class="box"/>
+  <text x="1045" y="540">双向 AC/DC</text>
+  <line x1="1090" y1="558" x2="1090" y2="650" class="line"/>
+
+  <line x1="920" y1="650" x2="920" y2="724" class="line"/>
+  <rect x="858" y="724" width="124" height="56" class="box"/>
+  <text x="876" y="750">PV 100kW</text>
+  <text x="874" y="772" class="small">DC/DC</text>
+  <line x1="1056" y1="650" x2="1056" y2="724" class="line"/>
+  <rect x="996" y="724" width="126" height="56" class="box"/>
+  <text x="1010" y="750">充电负荷</text>
+  <text x="1030" y="772">80kW</text>
+  <line x1="1190" y1="650" x2="1190" y2="724" class="line"/>
+  <rect x="1130" y="724" width="128" height="66" class="box"/>
+  <text x="1148" y="750">储能系统</text>
+  <text x="1142" y="772">100kW×2h</text>
+  <text x="1154" y="792" class="small">DC/DC</text>
+  <rect x="940" y="800" width="196" height="24" class="box"/>
+  <text x="958" y="818" class="tiny">直流小微网协调控制器</text>
+  <line x1="1246" y1="650" x2="1246" y2="690" class="thin"/>
+  <path d="M1230 690 H1262 M1236 698 H1256 M1242 706 H1250" class="ground"/>
+  <text x="1180" y="618" class="tiny">IMD 绝缘监测</text>
+
+  <!-- EMS and controllers -->
+  <rect x="548" y="56" width="230" height="54" class="box"/>
+  <text x="580" y="88">微电网 EMS</text>
+  <rect x="520" y="472" width="178" height="34" class="box"/>
+  <text x="540" y="495" class="small">大微网协调控制器</text>
+  <path d="M663 110 L610 472" class="dash" marker-end="url(#arrow)"/>
+  <path d="M663 110 L1064 490" class="dash" marker-end="url(#arrow)"/>
+  <path d="M663 110 L1038 800" class="dash" marker-end="url(#arrow)"/>
+  <text x="740" y="86" class="tiny">虚线：通信/控制关系</text>
+
+  <!-- Legend -->
+  <rect x="82" y="746" width="330" height="104" class="box"/>
+  <text x="104" y="774" class="small">图例：粗线=母线，实线=一次回路</text>
+  <text x="104" y="800" class="small">QF=断路器，STS=静态开关</text>
+  <text x="104" y="826" class="small">虚线=EMS/协调控制通信线</text>
+</svg>

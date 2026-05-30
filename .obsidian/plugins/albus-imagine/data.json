@@ -1,0 +1,24 @@
+{
+  "imageManager": {
+    "folderPath": "",
+    "lastSelectedFolder": "pictures/主系统",
+    "showFileSize": true,
+    "showModifiedTime": true,
+    "confirmDelete": true,
+    "invertSvgInDarkMode": false,
+    "customFileTypes": [],
+    "defaultSortField": "mtime",
+    "defaultSortOrder": "desc",
+    "excludedFolders": []
+  },
+  "imageResize": {
+    "resizeInterval": 0,
+    "edgeSize": 20,
+    "dragResizeGeneral": true,
+    "dragResizeCallout": true
+  },
+  "imageViewer": {
+    "enabled": true
+  },
+  "settingsTab": "IMAGE_MANAGER"
+}

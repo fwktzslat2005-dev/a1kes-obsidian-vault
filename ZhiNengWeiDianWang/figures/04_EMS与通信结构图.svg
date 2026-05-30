@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+  <defs>
+    <style>
+      text { font-family: "SimSun", "Microsoft YaHei", Arial, sans-serif; font-size: 18px; fill: #111; }
+      .title { font-size: 28px; font-weight: 700; }
+      .small { font-size: 15px; }
+      .tiny { font-size: 13px; }
+      .line { stroke: #111; stroke-width: 2.1; fill: none; }
+      .dash { stroke: #111; stroke-width: 1.6; fill: none; stroke-dasharray: 7 6; }
+      .box { stroke: #111; stroke-width: 1.8; fill: #fff; }
+      .layer { stroke: #111; stroke-width: 1.4; fill: none; stroke-dasharray: 8 6; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="465" y="38" class="title">微电网 EMS 与通信结构图</text>
+
+  <!-- Top layer -->
+  <rect x="40" y="70" width="1320" height="180" class="layer"/>
+  <text x="60" y="102">顶层：能量管理与监控</text>
+  <rect x="142" y="130" width="230" height="70" class="box"/>
+  <text x="210" y="160">EMS</text>
+  <text x="170" y="184" class="small">能量管理系统</text>
+  <rect x="435" y="130" width="220" height="70" class="box"/>
+  <text x="472" y="172">监控工作站/HMI</text>
+  <rect x="720" y="130" width="210" height="70" class="box"/>
+  <text x="765" y="160">数据库</text>
+  <text x="750" y="184" class="small">历史数据/报表</text>
+  <rect x="995" y="130" width="190" height="70" class="box"/>
+  <text x="1034" y="160">UPS 电源</text>
+  <text x="1016" y="184" class="small">控制系统后备电源</text>
+  <line x1="372" y1="165" x2="435" y2="165" class="line"/>
+  <line x1="655" y1="165" x2="720" y2="165" class="line"/>
+  <line x1="930" y1="165" x2="995" y2="165" class="line"/>
+
+  <!-- Middle layer -->
+  <rect x="40" y="300" width="1320" height="210" class="layer"/>
+  <text x="60" y="332">中层：三套协调控制器</text>
+  <rect x="140" y="382" width="260" height="76" class="box"/>
+  <text x="170" y="414">交流大微电网</text>
+  <text x="180" y="440">协调控制器</text>
+  <rect x="520" y="382" width="260" height="76" class="box"/>
+  <text x="550" y="414">交流小微电网</text>
+  <text x="560" y="440">协调控制器</text>
+  <rect x="900" y="382" width="260" height="76" class="box"/>
+  <text x="930" y="414">直流小微电网</text>
+  <text x="940" y="440">协调控制器</text>
+  <line x1="257" y1="200" x2="270" y2="382" class="line" marker-end="url(#arrow)"/>
+  <line x1="545" y1="200" x2="650" y2="382" class="line" marker-end="url(#arrow)"/>
+  <line x1="825" y1="200" x2="1030" y2="382" class="line" marker-end="url(#arrow)"/>
+  <text x="466" y="284" class="small">EMS 与协调控制器：本方案选取工业以太网通信</text>
+
+  <!-- Bottom layer -->
+  <rect x="40" y="560" width="1320" height="340" class="layer"/>
+  <text x="60" y="592">底层：设备控制器、计量保护与执行机构</text>
+
+  <rect x="88" y="640" width="142" height="58" class="box"/>
+  <text x="102" y="674" class="small">光伏逆变器</text>
+  <rect x="248" y="640" width="142" height="58" class="box"/>
+  <text x="263" y="674" class="small">风电变流器</text>
+  <rect x="408" y="640" width="142" height="58" class="box"/>
+  <text x="434" y="674" class="small">储能 PCS</text>
+  <rect x="568" y="640" width="142" height="58" class="box"/>
+  <text x="594" y="674" class="small">BMS</text>
+  <rect x="728" y="640" width="142" height="58" class="box"/>
+  <text x="748" y="674" class="small">双向 AC/DC</text>
+  <rect x="888" y="640" width="142" height="58" class="box"/>
+  <text x="908" y="674" class="small">双向 DC/DC</text>
+  <rect x="1048" y="640" width="142" height="58" class="box"/>
+  <text x="1066" y="674" class="small">充电控制器</text>
+  <rect x="1208" y="640" width="120" height="58" class="box"/>
+  <text x="1225" y="674" class="small">断路器状态</text>
+
+  <rect x="190" y="760" width="160" height="58" class="box"/>
+  <text x="220" y="794" class="small">智能电表</text>
+  <rect x="410" y="760" width="170" height="58" class="box"/>
+  <text x="442" y="794" class="small">保护测控装置</text>
+  <rect x="640" y="760" width="170" height="58" class="box"/>
+  <text x="672" y="794" class="small">通信网关</text>
+  <rect x="870" y="760" width="170" height="58" class="box"/>
+  <text x="898" y="794" class="small">工业交换机</text>
+
+  <path d="M270 458 C250 540, 190 590, 159 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M270 458 C300 545, 340 590, 319 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M270 458 C390 540, 470 590, 479 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M650 458 C635 540, 634 590, 639 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M1030 458 C920 540, 820 590, 799 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M1030 458 C995 540, 970 590, 959 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M1030 458 C1090 540, 1120 590, 1119 640" class="dash" marker-end="url(#arrow)"/>
+  <path d="M650 458 C910 540, 1190 590, 1268 640" class="dash" marker-end="url(#arrow)"/>
+  <text x="462" y="542" class="small">协调控制器与设备层：现场总线/工业以太网</text>
+
+  <!-- Side hardware table -->
+  <rect x="1062" y="735" width="270" height="144" class="box"/>
+  <text x="1080" y="760" class="small">硬件作用简表</text>
+  <text x="1080" y="786" class="tiny">工控机/服务器：运行 EMS</text>
+  <text x="1080" y="810" class="tiny">监控站：显示状态与告警</text>
+  <text x="1080" y="834" class="tiny">交换机/网关：通信汇聚转换</text>
+  <text x="1080" y="858" class="tiny">电表/保护：采集与保护动作</text>
+
+  <text x="72" y="922" class="small">上传：电压、电流、功率、SOC、开关状态、告警；下发：并离网命令、储能功率、限发、负荷切除和充电调节。</text>
+</svg>

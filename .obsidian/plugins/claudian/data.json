@@ -1,0 +1,40 @@
+{
+  "tabManagerState": {
+    "openTabs": [
+      {
+        "tabId": "tab-1779273649155-ijsp8q2",
+        "conversationId": "conv-1779276514622-s3yqxmbs9"
+      },
+      {
+        "draftModel": "deepseek-v4-pro",
+        "tabId": "tab-1779273655127-hsk1l3u",
+        "conversationId": null
+      },
+      {
+        "tabId": "tab-1779277546561-yjzkynq",
+        "conversationId": "conv-1779277650228-qd5fxhwx8"
+      }
+    ],
+    "activeTabId": "tab-1779277546561-yjzkynq"
+  },
+  "settingsProvider": "codex",
+  "savedProviderModel": {
+    "codex": "deepseek-v4-pro[1m]"
+  },
+  "providerConfigs": {
+    "codex": {
+      "enabled": true,
+      "safeMode": "workspace-write",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "customModels": "deepseek-v4-pro[1m]",
+      "reasoningSummary": "detailed",
+      "environmentVariables": "OPENAI_API_KEY=sk-a70f170ba5864b04a865711dfc216911\nOPENAI_BASE_URL=https://api.deepseek.com/v1\nOPENAI_MODEL=deepseek-v4-pro[1m]",
+      "environmentHash": "",
+      "installationMethod": "native-windows",
+      "installationMethodsByHost": {},
+      "wslDistroOverride": "",
+      "wslDistroOverridesByHost": {}
+    }
+  }
+}

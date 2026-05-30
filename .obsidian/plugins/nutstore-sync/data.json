@@ -1,0 +1,125 @@
+{
+  "account": "",
+  "credential": "",
+  "remoteDir": "/我的坚果云/my notes/a1kes vault/",
+  "remoteCacheDir": "",
+  "useGitStyle": false,
+  "conflictStrategy": "diff-match-patch",
+  "oauthResponseText": "THBAfHGtr75ATygI8jrWcD-4KH6itwtz-gcHt5ZavBqNHggawwcCk5JsZe_gBVNaUKgET8BAe68fx7w-pvCZAYwCkqVD-4btDjif1h7-HMSv2BnNvPwEa1g1-doiG1j7V26MeqO8yj4Q4eIfq_-pf6_bF7w3AifcDHb20Th25vXtFsrN-w",
+  "loginMode": "sso",
+  "confirmBeforeSync": true,
+  "confirmBeforeDeleteInAutoSync": true,
+  "syncMode": "strict",
+  "filterRules": {
+    "exclusionRules": [
+      {
+        "expr": "**/.git",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/.github",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/.gitlab",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/.svn",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/node_modules",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/.DS_Store",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/__MACOSX",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/desktop.ini",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/Thumbs.db",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/.trash",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.doc",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.docx",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.ppt",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.pptx",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.xls",
+        "options": {
+          "caseSensitive": false
+        }
+      },
+      {
+        "expr": "**/~$*.xlsx",
+        "options": {
+          "caseSensitive": false
+        }
+      }
+    ],
+    "inclusionRules": []
+  },
+  "skipLargeFiles": {
+    "maxSize": "300 MB"
+  },
+  "realtimeSync": false,
+  "startupSyncDelaySeconds": 0,
+  "autoSyncIntervalSeconds": 0,
+  "ai": {
+    "providers": {},
+    "yolo": false
+  },
+  "configDirSyncMode": "all"
+}

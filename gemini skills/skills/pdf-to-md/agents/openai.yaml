@@ -1,0 +1,4 @@
+interface:
+  display_name: "《pdf转md》"
+  short_description: "将电气工程 PDF 用模型识图忠实转写为 Obsidian Markdown"
+  default_prompt: "使用 $pdf-to-md 将这个电气工程 PDF 渲染为页面图片，并用模型识图逐页忠实转写为 Obsidian Markdown；不要默认使用 OCR 脚本。"

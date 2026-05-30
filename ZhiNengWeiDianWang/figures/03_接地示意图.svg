@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <defs>
+    <style>
+      text { font-family: "SimSun", "Microsoft YaHei", Arial, sans-serif; font-size: 18px; fill: #111; }
+      .title { font-size: 28px; font-weight: 700; }
+      .small { font-size: 15px; }
+      .tiny { font-size: 13px; }
+      .line { stroke: #111; stroke-width: 2.2; fill: none; }
+      .thin { stroke: #111; stroke-width: 1.4; fill: none; }
+      .dash { stroke: #111; stroke-width: 1.5; fill: none; stroke-dasharray: 7 6; }
+      .box { stroke: #111; stroke-width: 1.8; fill: #fff; }
+      .bus { stroke: #111; stroke-width: 4; fill: none; }
+      .ground { stroke: #111; stroke-width: 1.8; fill: none; }
+    </style>
+  </defs>
+
+  <text x="380" y="40" class="title">微电网 TN-S 接地示意图</text>
+  <text x="64" y="82" class="small">本图只绘制正文最终采用方案：交流侧 TN-S，直流侧设备外壳接 PE 并设绝缘监测。</text>
+
+  <!-- Source and transformer -->
+  <circle cx="120" cy="165" r="44" class="line"/>
+  <path d="M94 165 C108 135,132 195,146 165" class="thin"/>
+  <text x="60" y="112">上级 380V 系统</text>
+  <line x1="164" y1="145" x2="1010" y2="145" class="line"/>
+  <line x1="164" y1="185" x2="1010" y2="185" class="line"/>
+  <line x1="164" y1="225" x2="1010" y2="225" class="line"/>
+  <line x1="164" y1="265" x2="1010" y2="265" class="line"/>
+  <line x1="164" y1="305" x2="1010" y2="305" class="line"/>
+  <text x="1030" y="150">L1</text>
+  <text x="1030" y="190">L2</text>
+  <text x="1030" y="230">L3</text>
+  <text x="1030" y="270">N</text>
+  <text x="1030" y="310">PE</text>
+
+  <!-- N grounding at source -->
+  <line x1="164" y1="265" x2="164" y2="350" class="line"/>
+  <line x1="164" y1="305" x2="224" y2="305" class="thin"/>
+  <line x1="224" y1="305" x2="224" y2="350" class="line"/>
+  <path d="M140 350 H188 M148 360 H180 M156 370 H172" class="ground"/>
+  <path d="M200 350 H248 M208 360 H240 M216 370 H232" class="ground"/>
+  <text x="84" y="402" class="small">电源中性点接地</text>
+  <text x="196" y="402" class="small">PE 总接地排</text>
+  <text x="500" y="340" class="small">TN-S：N 与 PE 分开敷设，PE 不作为工作中性线</text>
+
+  <!-- AC bus area -->
+  <rect x="80" y="450" width="500" height="276" class="dash"/>
+  <text x="100" y="478">交流微电网侧</text>
+  <line x1="130" y1="522" x2="540" y2="522" class="bus"/>
+  <text x="250" y="506" class="small">380V AC 母线</text>
+  <line x1="130" y1="556" x2="540" y2="556" class="thin"/>
+  <text x="548" y="562" class="small">N</text>
+  <line x1="130" y1="586" x2="540" y2="586" class="thin"/>
+  <text x="548" y="592" class="small">PE</text>
+
+  <rect x="120" y="630" width="108" height="48" class="box"/>
+  <text x="142" y="660" class="small">逆变器</text>
+  <rect x="272" y="630" width="108" height="48" class="box"/>
+  <text x="306" y="660" class="small">PCS</text>
+  <rect x="424" y="630" width="108" height="48" class="box"/>
+  <text x="450" y="660" class="small">负荷箱</text>
+  <line x1="174" y1="630" x2="174" y2="522" class="line"/>
+  <line x1="326" y1="630" x2="326" y2="522" class="line"/>
+  <line x1="478" y1="630" x2="478" y2="522" class="line"/>
+  <line x1="174" y1="678" x2="174" y2="704" class="thin"/>
+  <line x1="326" y1="678" x2="326" y2="704" class="thin"/>
+  <line x1="478" y1="678" x2="478" y2="704" class="thin"/>
+  <line x1="174" y1="704" x2="478" y2="704" class="thin"/>
+  <line x1="326" y1="704" x2="326" y2="586" class="thin"/>
+  <text x="112" y="714" class="tiny">外壳接 PE</text>
+
+  <!-- DC side -->
+  <rect x="650" y="450" width="456" height="276" class="dash"/>
+  <text x="670" y="478">直流小微电网侧</text>
+  <line x1="700" y1="526" x2="1050" y2="526" class="bus"/>
+  <line x1="700" y1="562" x2="1050" y2="562" class="bus"/>
+  <text x="1060" y="532" class="small">DC +</text>
+  <text x="1060" y="568" class="small">DC -</text>
+  <rect x="820" y="494" width="96" height="96" class="box"/>
+  <text x="845" y="540" class="small">IMD</text>
+  <text x="824" y="562" class="tiny">绝缘监测</text>
+  <line x1="820" y1="526" x2="780" y2="526" class="thin"/>
+  <line x1="916" y1="562" x2="960" y2="562" class="thin"/>
+
+  <rect x="700" y="630" width="118" height="48" class="box"/>
+  <text x="720" y="660" class="small">AC/DC</text>
+  <rect x="848" y="630" width="118" height="48" class="box"/>
+  <text x="868" y="660" class="small">DC/DC</text>
+  <rect x="996" y="630" width="88" height="48" class="box"/>
+  <text x="1008" y="660" class="small">充电设备</text>
+  <line x1="759" y1="630" x2="759" y2="562" class="line"/>
+  <line x1="907" y1="630" x2="907" y2="562" class="line"/>
+  <line x1="1040" y1="630" x2="1040" y2="562" class="line"/>
+  <line x1="759" y1="678" x2="759" y2="704" class="thin"/>
+  <line x1="907" y1="678" x2="907" y2="704" class="thin"/>
+  <line x1="1040" y1="678" x2="1040" y2="704" class="thin"/>
+  <line x1="759" y1="704" x2="1040" y2="704" class="thin"/>
+  <line x1="907" y1="704" x2="907" y2="760" class="thin"/>
+  <path d="M883 760 H931 M891 770 H923 M899 780 H915" class="ground"/>
+  <text x="732" y="714" class="tiny">直流设备外壳接 PE</text>
+
+  <!-- PE interconnection -->
+  <line x1="326" y1="704" x2="326" y2="780" class="thin"/>
+  <line x1="326" y1="780" x2="907" y2="780" class="thin"/>
+  <text x="430" y="806" class="small">并网与离网状态下，保护接地 PE 均保持连续，不随 PCC 断开。</text>
+  <text x="430" y="832" class="small">直流正负极不在本方案中直接接地，只做绝缘监测和外壳保护接地。</text>
+</svg>

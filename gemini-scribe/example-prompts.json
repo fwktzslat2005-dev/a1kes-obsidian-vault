@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "search",
+    "text": "Find notes detailing different power plant types within the Electrical Equipment and Main Systems folder"
+  },
+  {
+    "icon": "file-plus",
+    "text": "Create a summary of the available Obsidian Markdown skills based on the reference notes"
+  },
+  {
+    "icon": "folder-tree",
+    "text": "Organize the notes in the Simple Power System Short-circuit Analysis folder by their section number"
+  },
+  {
+    "icon": "lightbulb",
+    "text": "Draft a new skill definition for the State Grid Assistant following the existing project structure"
+  }
+]

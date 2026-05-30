@@ -1,0 +1,35 @@
+# Obsidian local state
+.obsidian/workspace*.json
+
+# Obsidian plugin packages: keep settings/manifests, ignore downloaded code
+.obsidian/plugins/*/*
+!.obsidian/plugins/*/data*.json
+!.obsidian/plugins/*/manifest.json
+!.obsidian/plugins/*/brat-migrations.json
+
+# Assistant/session local state
+.claudian/sessions/
+
+# Trash and generated caches
+.trash/
+模型识图缓存/
+**/.matplotlib_cache/
+**/build/
+
+# Local dependency/cache folders
+**/.python_deps/
+**/__pycache__/
+.venv/
+node_modules/
+
+# Large source/output documents
+pdf/
+**/*.pdf
+**/*.docx
+**/*.pptx
+**/*.xlsx
+
+# Common OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
