@@ -6,16 +6,16 @@
         "conversationId": "conv-1779276514622-s3yqxmbs9"
       },
       {
-        "draftModel": "deepseek-v4-pro",
-        "tabId": "tab-1779273655127-hsk1l3u",
-        "conversationId": null
+        "tabId": "tab-1780148619754-1sfu93b",
+        "conversationId": "conv-1780148629045-n144gavli"
       },
       {
-        "tabId": "tab-1779277546561-yjzkynq",
-        "conversationId": "conv-1779277650228-qd5fxhwx8"
+        "draftModel": "deepseek-v4-pro",
+        "tabId": "tab-1780149155215-i75ygrl",
+        "conversationId": null
       }
     ],
-    "activeTabId": "tab-1779277546561-yjzkynq"
+    "activeTabId": "tab-1780148619754-1sfu93b"
   },
   "settingsProvider": "codex",
   "savedProviderModel": {
@@ -25,7 +25,7 @@
     "codex": {
       "enabled": true,
       "safeMode": "workspace-write",
-      "cliPath": "",
+      "cliPath": "C:\\Users\\A1KES\\AppData\\Roaming\\npm\\codex.cmd",
       "cliPathsByHost": {},
       "customModels": "deepseek-v4-pro[1m]",
       "reasoningSummary": "detailed",
